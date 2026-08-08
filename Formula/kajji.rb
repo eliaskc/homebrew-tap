@@ -1,7 +1,7 @@
 class Kajji < Formula
   desc "Terminal UI for Jujutsu: the rudder for your jj"
   homepage "https://github.com/eliaskc/kajji"
-  version "0.16.0"
+  version "0.17.0"
   license "MIT"
 
   def caveats
@@ -11,17 +11,17 @@ class Kajji < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/eliaskc/kajji/releases/download/v#{version}/kajji-darwin-arm64.zip"
-      sha256 "02c7694668cefd899d3ff5a91bf8f4c9b9abd44ebc4df04f93fea29177843824"
+      sha256 "88518dd36e8a349c58844c279827986589d0ef89e36ca3b7d7a68c91d3c159f7"
     else
       url "https://github.com/eliaskc/kajji/releases/download/v#{version}/kajji-darwin-x64.zip"
-      sha256 "2b31cd51123e869e8d58c100c2af4359ae1adafae111ccd05cbfa33319b86b6b"
+      sha256 "89548cbed536ac2e0c1f9f3f7c2a8b9f4f7f8566ea6428095f04a2fd142e3ddb"
     end
   end
 
   # Linuxbrew is x86_64-only upstream, so we ship a single Linux bottle.
   on_linux do
     url "https://github.com/eliaskc/kajji/releases/download/v#{version}/kajji-linux-x64.tar.gz"
-    sha256 "df189e072f48d8e27d02c0aa2db397f677ba1458204c1169f75e01a0b60863b8"
+    sha256 "ead2f8dfd450c34cd3142a15678eacb6b12d85016a3484fc2249326bb79e1f63"
   end
 
   def install
